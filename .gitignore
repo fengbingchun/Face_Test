@@ -1,0 +1,8 @@
+/doc/
+/lib/
+/obj/
+*.sdf
+*.suo
+*.opensdf
+
+

@@ -4,11 +4,6 @@
 #include <facedetect-dll.h>
 #include <opencv2/opencv.hpp>
 
-int test_facedetect_frontal();
-int test_facedetect_multiview();
-int test_facedetect_multiview_reinforce();
-int test_facedetect_frontal_surveillance();
-
 int main()
 {
 	std::vector<std::string> images{ "1.jpg", "2.jpg", "3.jpg", "4.jpeg", "5.jpeg", "6.jpg", "7.jpg", "8.jpg", "9.jpg", "10.jpg",
@@ -33,19 +28,26 @@ int main()
 		&facedetect_frontal_surveillance
 	};
 
+	std::string detect_type[4] {"face frontal", "face multiview", "face multiview reinforce", "face surveillance"};
+
 	for (int method = 0; method < 4; method++) {
 		detect_face detect = detect_methods[method];
+		fprintf(stderr, "detect type: %s\n", detect_type[method].c_str());
 
 		for (int i = 0; i < images.size(); i++) {
-			cv::Mat src = cv::imread(path_images + images[i], 1);
-			if (src.empty()) {
+			cv::Mat src_ = cv::imread(path_images + images[i], 1);
+			if (src_.empty()) {
 				fprintf(stderr, "read image error: %s\n", images[i].c_str());
 				return -1;
 			}
-			cv::cvtColor(src, src, CV_BGR2GRAY);
+
+			cv::Mat src;
+			cv::cvtColor(src_, src, CV_BGR2GRAY);
 
 			int* results = nullptr;
-			results = detect(src.data, src.cols, src.rows, src.step, 1.2f, 5, 24, 0);
+			results = detect(src.data, src.cols, src.rows, src.step, 1.2f, 2, 10, 0);
+			std::string save_result = path_images + std::to_string(method) + "_" + images[i];
+			//fprintf(stderr, "save result: %s\n", save_result.c_str());
 
 			for (int faces = 0; faces < (results ? *results : 0); faces++) {
 				short* p = ((short*)(results + 1)) + 6 * faces;
@@ -56,10 +58,35 @@ int main()
 				int neighbors = p[4];
 				int angle = p[5];
 
-				fprintf(stderr, "face_rect=[%d, %d, %d, %d], neighbors=%d, angle=%d\n", x, y, w, h, neighbors, angle);
+				fprintf(stderr, "image_name: %s, faces_num: %d, face_rect=[%d, %d, %d, %d], neighbors=%d, angle=%d\n",
+					images[i].c_str(), *results, x, y, w, h, neighbors, angle);
+
+				cv::rectangle(src_, cv::Rect(x, y, w, h), cv::Scalar(0, 255, 0), 2);
 			}
+
+			cv::imwrite(save_result, src_);
 		}
 	}
+
+	int width = 200;
+	int height = 200;
+	cv::Mat dst(height * 5, width * 4, CV_8UC3);
+	for (int i = 0; i < images.size(); i++) {
+		std::string input_image = path_images + "2_" + images[i];
+		cv::Mat src = cv::imread(input_image, 1);
+		if (src.empty()) {
+			fprintf(stderr, "read image error: %s\n", images[i].c_str());
+			return -1;
+		}
+
+		cv::resize(src, src, cv::Size(width, height), 0, 0, 4);
+		int x = (i * width) % (width * 4);
+		int y = (i / 4) * height;
+		cv::Mat part = dst(cv::Rect(x, y, width, height));
+		src.copyTo(part);
+	}
+	std::string output_image = path_images + "result.png";
+	cv::imwrite(output_image, dst);
 
 	fprintf(stderr, "ok\n");
 	return 0;

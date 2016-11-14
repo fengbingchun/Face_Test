@@ -5,6 +5,12 @@ VisualStudioVersion = 12.0.30501.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "libfacedetection_Test", "..\libfacedetection_Test\libfacedetection_Test.vcxproj", "{C18673DA-5543-45DC-A4F3-14BE65C837A3}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SeetaFaceEngine_FaceDetection", "..\SeetaFaceEngine_FaceDetection\SeetaFaceEngine_FaceDetection.vcxproj", "{87A202C9-C959-4E91-A059-AC359682D7EC}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SeetaFaceEngine_FaceAlignment", "..\SeetaFaceEngine_FaceAlignment\SeetaFaceEngine_FaceAlignment.vcxproj", "{36D4D216-2239-4C5C-B965-66C5F9872DF8}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SeetaFaceEngine_FaceIdentification", "..\SeetaFaceEngine_FaceIdentification\SeetaFaceEngine_FaceIdentification.vcxproj", "{AB9301F9-78AF-4170-9ACA-2B1154D7F83D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Win32 = Debug|Win32
@@ -21,6 +27,24 @@ Global
 		{C18673DA-5543-45DC-A4F3-14BE65C837A3}.Release|Win32.Build.0 = Release|Win32
 		{C18673DA-5543-45DC-A4F3-14BE65C837A3}.Release|x64.ActiveCfg = Release|x64
 		{C18673DA-5543-45DC-A4F3-14BE65C837A3}.Release|x64.Build.0 = Release|x64
+		{87A202C9-C959-4E91-A059-AC359682D7EC}.Debug|Win32.ActiveCfg = Debug|Win32
+		{87A202C9-C959-4E91-A059-AC359682D7EC}.Debug|Win32.Build.0 = Debug|Win32
+		{87A202C9-C959-4E91-A059-AC359682D7EC}.Debug|x64.ActiveCfg = Debug|x64
+		{87A202C9-C959-4E91-A059-AC359682D7EC}.Release|Win32.ActiveCfg = Release|Win32
+		{87A202C9-C959-4E91-A059-AC359682D7EC}.Release|Win32.Build.0 = Release|Win32
+		{87A202C9-C959-4E91-A059-AC359682D7EC}.Release|x64.ActiveCfg = Release|x64
+		{36D4D216-2239-4C5C-B965-66C5F9872DF8}.Debug|Win32.ActiveCfg = Debug|Win32
+		{36D4D216-2239-4C5C-B965-66C5F9872DF8}.Debug|Win32.Build.0 = Debug|Win32
+		{36D4D216-2239-4C5C-B965-66C5F9872DF8}.Debug|x64.ActiveCfg = Debug|x64
+		{36D4D216-2239-4C5C-B965-66C5F9872DF8}.Release|Win32.ActiveCfg = Release|Win32
+		{36D4D216-2239-4C5C-B965-66C5F9872DF8}.Release|Win32.Build.0 = Release|Win32
+		{36D4D216-2239-4C5C-B965-66C5F9872DF8}.Release|x64.ActiveCfg = Release|x64
+		{AB9301F9-78AF-4170-9ACA-2B1154D7F83D}.Debug|Win32.ActiveCfg = Debug|Win32
+		{AB9301F9-78AF-4170-9ACA-2B1154D7F83D}.Debug|Win32.Build.0 = Debug|Win32
+		{AB9301F9-78AF-4170-9ACA-2B1154D7F83D}.Debug|x64.ActiveCfg = Debug|x64
+		{AB9301F9-78AF-4170-9ACA-2B1154D7F83D}.Release|Win32.ActiveCfg = Release|Win32
+		{AB9301F9-78AF-4170-9ACA-2B1154D7F83D}.Release|Win32.Build.0 = Release|Win32
+		{AB9301F9-78AF-4170-9ACA-2B1154D7F83D}.Release|x64.ActiveCfg = Release|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

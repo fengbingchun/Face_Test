@@ -11,6 +11,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SeetaFaceEngine_FaceAlignme
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SeetaFaceEngine_FaceIdentification", "..\SeetaFaceEngine_FaceIdentification\SeetaFaceEngine_FaceIdentification.vcxproj", "{AB9301F9-78AF-4170-9ACA-2B1154D7F83D}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SeetaFaceEngine_Test", "..\SeetaFaceEngine_Test\SeetaFaceEngine_Test.vcxproj", "{635DD422-162F-48A8-88E6-F700427316C5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Win32 = Debug|Win32
@@ -45,6 +47,12 @@ Global
 		{AB9301F9-78AF-4170-9ACA-2B1154D7F83D}.Release|Win32.ActiveCfg = Release|Win32
 		{AB9301F9-78AF-4170-9ACA-2B1154D7F83D}.Release|Win32.Build.0 = Release|Win32
 		{AB9301F9-78AF-4170-9ACA-2B1154D7F83D}.Release|x64.ActiveCfg = Release|x64
+		{635DD422-162F-48A8-88E6-F700427316C5}.Debug|Win32.ActiveCfg = Debug|Win32
+		{635DD422-162F-48A8-88E6-F700427316C5}.Debug|Win32.Build.0 = Debug|Win32
+		{635DD422-162F-48A8-88E6-F700427316C5}.Debug|x64.ActiveCfg = Debug|x64
+		{635DD422-162F-48A8-88E6-F700427316C5}.Release|Win32.ActiveCfg = Release|Win32
+		{635DD422-162F-48A8-88E6-F700427316C5}.Release|Win32.Build.0 = Release|Win32
+		{635DD422-162F-48A8-88E6-F700427316C5}.Release|x64.ActiveCfg = Release|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

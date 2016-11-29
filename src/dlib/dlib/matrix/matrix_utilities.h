@@ -2662,7 +2662,7 @@ namespace dlib
         const P& pixel
     )
     {
-        COMPILE_TIME_ASSERT(pixel_traits<P>::num > 0);
+        COMPILE_TIME_ASSERT(static_cast<int>(pixel_traits<P>::num) > 0);
         matrix<T,pixel_traits<P>::num,1> m;
         pixel_to_vector_helper<P>::assign(m,pixel);
         return m;

@@ -1,0 +1,249 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{54474B82-C7CC-4FDA-A3A0-F0BDA0F2E8B7}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>Dlib</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+    <OutDir>.\../../../obj/dbg/x64_vc12/Dlib\</OutDir>
+    <IntDir>.\../../../obj/dbg/x64_vc12/Dlib\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+    <OutDir>.\../../../obj/rel/x64_vc12/Dlib\</OutDir>
+    <IntDir>.\../../../obj/rel/x64_vc12/Dlib\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>E:\GitCode\Face_Test\src\dlib\dlib;E:\GitCode\Face_Test\src\dlib\dlib\any;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;_LIB;DLIB_PNG_SUPPORT;DLIB_JPEG_SUPPORT;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>E:\GitCode\Face_Test\src\dlib\dlib\external\libpng;E:\GitCode\Face_Test\src\dlib\dlib\external\libjpeg;E:\GitCode\Face_Test\src\dlib\dlib\external\zlib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PrecompiledHeaderOutputFile>.\../../../obj/dbg/x64_vc12/Dlib\Dlib.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>.\../../../obj/dbg/x64_vc12/Dlib\</AssemblerListingLocation>
+      <ObjectFileName>.\../../../obj/dbg/x64_vc12/Dlib\</ObjectFileName>
+      <ProgramDataBaseFileName>.\../../../obj/dbg/x64_vc12/Dlib\</ProgramDataBaseFileName>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <OutputFile>../../../lib/dbg/x64_vc12/Dlib.dll</OutputFile>
+      <ImportLibrary>../../../lib/dbg/x64_vc12/Dlib.lib</ImportLibrary>
+    </Link>
+    <Bscmake>
+      <OutputFile>.\../../../obj/dbg/x64_vc12/Dlib\Dlib.bsc</OutputFile>
+    </Bscmake>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>E:\GitCode\Face_Test\src\dlib\dlib\external\zlib;E:\GitCode\Face_Test\src\dlib\dlib\external\libpng;E:\GitCode\Face_Test\src\dlib\dlib\external\libjpeg;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;_LIB;DLIB_PNG_SUPPORT;DLIB_JPEG_SUPPORT;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>E:\GitCode\Face_Test\src\dlib\dlib\external\libpng;E:\GitCode\Face_Test\src\dlib\dlib\external\libjpeg;E:\GitCode\Face_Test\src\dlib\dlib\external\zlib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PrecompiledHeaderOutputFile>.\../../../obj/rel/x64_vc12/Dlib\Dlib.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>.\../../../obj/rel/x64_vc12/Dlib\</AssemblerListingLocation>
+      <ObjectFileName>.\../../../obj/rel/x64_vc12/Dlib\</ObjectFileName>
+      <ProgramDataBaseFileName>.\../../../obj/rel/x64_vc12/Dlib\</ProgramDataBaseFileName>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <OutputFile>../../../lib/rel/x64_vc12/Dlib.dll</OutputFile>
+      <ImportLibrary>../../../lib/rel/x64_vc12/Dlib.lib</ImportLibrary>
+    </Link>
+    <Bscmake>
+      <OutputFile>.\../../../obj/rel/x64_vc12/Dlib\Dlib.bsc</OutputFile>
+    </Bscmake>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\src\dlib\dlib\all\source.cpp" />
+    <ClCompile Include="..\..\..\src\dlib\dlib\external\libjpeg\jcapimin.cpp" />
+    <ClCompile Include="..\..\..\src\dlib\dlib\external\libjpeg\jcapistd.cpp" />
+    <ClCompile Include="..\..\..\src\dlib\dlib\external\libjpeg\jccoefct.cpp" />
+    <ClCompile Include="..\..\..\src\dlib\dlib\external\libjpeg\jccolor.cpp" />
+    <ClCompile Include="..\..\..\src\dlib\dlib\external\libjpeg\jcdctmgr.cpp" />
+    <ClCompile Include="..\..\..\src\dlib\dlib\external\libjpeg\jchuff.cpp" />
+    <ClCompile Include="..\..\..\src\dlib\dlib\external\libjpeg\jcinit.cpp" />
+    <ClCompile Include="..\..\..\src\dlib\dlib\external\libjpeg\jcmainct.cpp" />
+    <ClCompile Include="..\..\..\src\dlib\dlib\external\libjpeg\jcmarker.cpp" />
+    <ClCompile Include="..\..\..\src\dlib\dlib\external\libjpeg\jcmaster.cpp" />
+    <ClCompile Include="..\..\..\src\dlib\dlib\external\libjpeg\jcomapi.cpp" />
+    <ClCompile Include="..\..\..\src\dlib\dlib\external\libjpeg\jcparam.cpp" />
+    <ClCompile Include="..\..\..\src\dlib\dlib\external\libjpeg\jcphuff.cpp" />
+    <ClCompile Include="..\..\..\src\dlib\dlib\external\libjpeg\jcprepct.cpp" />
+    <ClCompile Include="..\..\..\src\dlib\dlib\external\libjpeg\jcsample.cpp" />
+    <ClCompile Include="..\..\..\src\dlib\dlib\external\libjpeg\jdapimin.cpp" />
+    <ClCompile Include="..\..\..\src\dlib\dlib\external\libjpeg\jdapistd.cpp" />
+    <ClCompile Include="..\..\..\src\dlib\dlib\external\libjpeg\jdatadst.cpp" />
+    <ClCompile Include="..\..\..\src\dlib\dlib\external\libjpeg\jdatasrc.cpp" />
+    <ClCompile Include="..\..\..\src\dlib\dlib\external\libjpeg\jdcoefct.cpp" />
+    <ClCompile Include="..\..\..\src\dlib\dlib\external\libjpeg\jdcolor.cpp" />
+    <ClCompile Include="..\..\..\src\dlib\dlib\external\libjpeg\jddctmgr.cpp" />
+    <ClCompile Include="..\..\..\src\dlib\dlib\external\libjpeg\jdhuff.cpp" />
+    <ClCompile Include="..\..\..\src\dlib\dlib\external\libjpeg\jdinput.cpp" />
+    <ClCompile Include="..\..\..\src\dlib\dlib\external\libjpeg\jdmainct.cpp" />
+    <ClCompile Include="..\..\..\src\dlib\dlib\external\libjpeg\jdmarker.cpp" />
+    <ClCompile Include="..\..\..\src\dlib\dlib\external\libjpeg\jdmaster.cpp" />
+    <ClCompile Include="..\..\..\src\dlib\dlib\external\libjpeg\jdmerge.cpp" />
+    <ClCompile Include="..\..\..\src\dlib\dlib\external\libjpeg\jdphuff.cpp" />
+    <ClCompile Include="..\..\..\src\dlib\dlib\external\libjpeg\jdpostct.cpp" />
+    <ClCompile Include="..\..\..\src\dlib\dlib\external\libjpeg\jdsample.cpp" />
+    <ClCompile Include="..\..\..\src\dlib\dlib\external\libjpeg\jerror.cpp" />
+    <ClCompile Include="..\..\..\src\dlib\dlib\external\libjpeg\jfdctflt.cpp" />
+    <ClCompile Include="..\..\..\src\dlib\dlib\external\libjpeg\jfdctfst.cpp" />
+    <ClCompile Include="..\..\..\src\dlib\dlib\external\libjpeg\jfdctint.cpp" />
+    <ClCompile Include="..\..\..\src\dlib\dlib\external\libjpeg\jidctflt.cpp" />
+    <ClCompile Include="..\..\..\src\dlib\dlib\external\libjpeg\jidctfst.cpp" />
+    <ClCompile Include="..\..\..\src\dlib\dlib\external\libjpeg\jidctint.cpp" />
+    <ClCompile Include="..\..\..\src\dlib\dlib\external\libjpeg\jidctred.cpp" />
+    <ClCompile Include="..\..\..\src\dlib\dlib\external\libjpeg\jmemmgr.cpp" />
+    <ClCompile Include="..\..\..\src\dlib\dlib\external\libjpeg\jmemnobs.cpp" />
+    <ClCompile Include="..\..\..\src\dlib\dlib\external\libjpeg\jquant1.cpp" />
+    <ClCompile Include="..\..\..\src\dlib\dlib\external\libjpeg\jquant2.cpp" />
+    <ClCompile Include="..\..\..\src\dlib\dlib\external\libjpeg\jutils.cpp" />
+    <ClCompile Include="..\..\..\src\dlib\dlib\external\libpng\png.c" />
+    <ClCompile Include="..\..\..\src\dlib\dlib\external\libpng\pngerror.c" />
+    <ClCompile Include="..\..\..\src\dlib\dlib\external\libpng\pngget.c" />
+    <ClCompile Include="..\..\..\src\dlib\dlib\external\libpng\pngmem.c" />
+    <ClCompile Include="..\..\..\src\dlib\dlib\external\libpng\pngpread.c" />
+    <ClCompile Include="..\..\..\src\dlib\dlib\external\libpng\pngread.c" />
+    <ClCompile Include="..\..\..\src\dlib\dlib\external\libpng\pngrio.c" />
+    <ClCompile Include="..\..\..\src\dlib\dlib\external\libpng\pngrtran.c" />
+    <ClCompile Include="..\..\..\src\dlib\dlib\external\libpng\pngrutil.c" />
+    <ClCompile Include="..\..\..\src\dlib\dlib\external\libpng\pngset.c" />
+    <ClCompile Include="..\..\..\src\dlib\dlib\external\libpng\pngtrans.c" />
+    <ClCompile Include="..\..\..\src\dlib\dlib\external\libpng\pngwio.c" />
+    <ClCompile Include="..\..\..\src\dlib\dlib\external\libpng\pngwrite.c" />
+    <ClCompile Include="..\..\..\src\dlib\dlib\external\libpng\pngwtran.c" />
+    <ClCompile Include="..\..\..\src\dlib\dlib\external\libpng\pngwutil.c" />
+    <ClCompile Include="..\..\..\src\dlib\dlib\external\zlib\adler32.c" />
+    <ClCompile Include="..\..\..\src\dlib\dlib\external\zlib\compress.c" />
+    <ClCompile Include="..\..\..\src\dlib\dlib\external\zlib\crc32.c" />
+    <ClCompile Include="..\..\..\src\dlib\dlib\external\zlib\deflate.c" />
+    <ClCompile Include="..\..\..\src\dlib\dlib\external\zlib\gzclose.c" />
+    <ClCompile Include="..\..\..\src\dlib\dlib\external\zlib\gzlib.c" />
+    <ClCompile Include="..\..\..\src\dlib\dlib\external\zlib\gzread.c" />
+    <ClCompile Include="..\..\..\src\dlib\dlib\external\zlib\gzwrite.c" />
+    <ClCompile Include="..\..\..\src\dlib\dlib\external\zlib\infback.c" />
+    <ClCompile Include="..\..\..\src\dlib\dlib\external\zlib\inffast.c" />
+    <ClCompile Include="..\..\..\src\dlib\dlib\external\zlib\inflate.c" />
+    <ClCompile Include="..\..\..\src\dlib\dlib\external\zlib\inftrees.c" />
+    <ClCompile Include="..\..\..\src\dlib\dlib\external\zlib\trees.c" />
+    <ClCompile Include="..\..\..\src\dlib\dlib\external\zlib\uncompr.c" />
+    <ClCompile Include="..\..\..\src\dlib\dlib\external\zlib\zutil.c" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

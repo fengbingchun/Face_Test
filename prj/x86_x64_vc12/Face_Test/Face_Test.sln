@@ -13,6 +13,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SeetaFaceEngine_FaceIdentif
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SeetaFaceEngine_Test", "..\SeetaFaceEngine_Test\SeetaFaceEngine_Test.vcxproj", "{635DD422-162F-48A8-88E6-F700427316C5}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Dlib", "..\Dlib\Dlib.vcxproj", "{54474B82-C7CC-4FDA-A3A0-F0BDA0F2E8B7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Win32 = Debug|Win32
@@ -53,6 +55,12 @@ Global
 		{635DD422-162F-48A8-88E6-F700427316C5}.Release|Win32.ActiveCfg = Release|Win32
 		{635DD422-162F-48A8-88E6-F700427316C5}.Release|Win32.Build.0 = Release|Win32
 		{635DD422-162F-48A8-88E6-F700427316C5}.Release|x64.ActiveCfg = Release|x64
+		{54474B82-C7CC-4FDA-A3A0-F0BDA0F2E8B7}.Debug|Win32.ActiveCfg = Debug|Win32
+		{54474B82-C7CC-4FDA-A3A0-F0BDA0F2E8B7}.Debug|Win32.Build.0 = Debug|Win32
+		{54474B82-C7CC-4FDA-A3A0-F0BDA0F2E8B7}.Debug|x64.ActiveCfg = Debug|x64
+		{54474B82-C7CC-4FDA-A3A0-F0BDA0F2E8B7}.Release|Win32.ActiveCfg = Release|Win32
+		{54474B82-C7CC-4FDA-A3A0-F0BDA0F2E8B7}.Release|Win32.Build.0 = Release|Win32
+		{54474B82-C7CC-4FDA-A3A0-F0BDA0F2E8B7}.Release|x64.ActiveCfg = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

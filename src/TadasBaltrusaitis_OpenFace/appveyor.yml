@@ -1,0 +1,28 @@
+version: 1.0.{build}
+branches:
+  only:
+  - develop
+  - master
+  - /^feature-.*$/
+max_jobs: 4  
+configuration:
+- Debug
+- Release
+platform:
+- x64
+- Win32
+build:
+  project: OpenFace.sln
+  verbosity: minimal
+test_script:
+# C++  
+  - cmd: dir
+  - cmd: if exist x64 (cd x64)
+  - cmd: if exist Debug (cd Debug)
+  - cmd: if exist Release (cd Release)
+  - cmd: dir
+  - cmd: if exist "../videos" (FaceLandmarkImg.exe -fdir "../videos/" -ofdir "./demo_img/" -oidir "./demo_img/" -wild -q) else (FaceLandmarkImg.exe -fdir "../../videos/" -ofdir "./demo_img/" -oidir "./demo_img/" -wild -q)
+  - cmd: if exist "../videos" (FaceLandmarkImg.exe -inroot ../videos -f obama.jpg -outroot out_data -of obama.pts -op obama.3d -oi obama.bmp -q) else (FaceLandmarkImg.exe -inroot ../../videos -f obama.jpg -outroot out_data -of obama.pts -op obama.3d -oi obama.bmp -q)
+  - cmd: if exist "../videos" (FaceLandmarkVidMulti.exe -inroot ../videos -f multi_face.avi -ov multi_face.avi -q) else (FaceLandmarkVidMulti.exe -inroot ../../videos -f multi_face.avi -ov multi_face.avi -q)
+  - cmd: if exist "../videos" (FeatureExtraction.exe -f "../videos/1815_01_008_tony_blair.avi" -outroot output_features -of "1815_01_008_tony_blair.txt" -simalign aligned -ov feat_track.avi -hogalign hog_test.dat -q) else (FeatureExtraction.exe -f "../../videos/1815_01_008_tony_blair.avi" -outroot output_features -of "1815_01_008_tony_blair.txt" -simalign aligned -ov feat_track.avi -hogalign hog_test.dat -q)
+  - cmd: if exist "../videos" (FaceLandmarkVid.exe -f "../videos/1815_01_008_tony_blair.avi" -ov track.avi -q) else (FaceLandmarkVid.exe -f "../../videos/1815_01_008_tony_blair.avi" -ov track.avi -q)

@@ -1,0 +1,36 @@
+exe/Recording/x64/
+exe/FaceLandmarkVidMulti/x64/
+lib/3rdParty/dlib/x64/
+lib/local/FaceAnalyser/x64/
+lib/local/LandmarkDetector/x64/
+exe/FaceLandmarkImg/x64/
+exe/FaceLandmarkVid/x64/
+exe/FeatureExtraction/x64/
+x64/Release/
+OpenFace.VC.opendb
+OpenFace.sdf
+matlab_runners/Action Unit Experiments/AU_preds/
+matlab_runners/Feature Point Experiments/out_wild_clnf/
+matlab_runners/Demos/demo_img/
+matlab_runners/Demos/demo_vid/
+matlab_runners/Feature Point Experiments/out_wild_clnf_wild/
+matlab_runners/Feature Point Experiments/out_wild_svr/
+matlab_runners/Feature Point Experiments/out_wild_svr_wild/
+matlab_runners/Feature Point Experiments/yt_features/
+matlab_runners/Feature Point Experiments/yt_features_clm/
+matlab_runners/Gaze Experiments/mpii_out/
+build/
+Release/AU_predictors/
+Release/
+exe/Recording/recording/
+ipch/
+exe/FeatureExtraction/out_bp4d/
+matlab_runners/Action Unit Experiments/out_bp4d/
+matlab_runners/Action Unit Experiments/out_SEMAINE/
+x64/Debug/
+matlab_runners/Action Unit Experiments/out_unbc/
+matlab_runners/Action Unit Experiments/out_bosph/
+matlab_runners/Action Unit Experiments/out_DISFA/
+matlab_runners/Action Unit Experiments/out_fera/
+matlab_runners/Demos/output_features_seq/
+matlab_runners/Demos/output_features_vid/

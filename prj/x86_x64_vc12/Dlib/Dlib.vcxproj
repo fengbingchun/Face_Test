@@ -31,7 +31,7 @@
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
-    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <ConfigurationType>StaticLibrary</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
     <PlatformToolset>v120</PlatformToolset>
     <CharacterSet>MultiByte</CharacterSet>
@@ -44,7 +44,7 @@
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
-    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <ConfigurationType>StaticLibrary</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
     <PlatformToolset>v120</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
@@ -119,6 +119,9 @@
     <Bscmake>
       <OutputFile>.\../../../obj/dbg/x64_vc12/Dlib\Dlib.bsc</OutputFile>
     </Bscmake>
+    <Lib>
+      <OutputFile>../../../lib/dbg/x64_vc12/Dlib.lib</OutputFile>
+    </Lib>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
@@ -165,6 +168,9 @@
     <Bscmake>
       <OutputFile>.\../../../obj/rel/x64_vc12/Dlib\Dlib.bsc</OutputFile>
     </Bscmake>
+    <Lib>
+      <OutputFile>../../../lib/rel/x64_vc12/Dlib.lib</OutputFile>
+    </Lib>
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="..\..\..\src\dlib\dlib\all\source.cpp" />

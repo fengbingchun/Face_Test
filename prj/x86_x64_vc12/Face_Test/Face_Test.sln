@@ -20,6 +20,9 @@ EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "tbb", "..\tbb\tbb.vcxproj", "{D5FCBE75-EAFC-458D-B1AB-D600659681D0}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "tbbmalloc", "..\tbbmalloc\tbbmalloc.vcxproj", "{CD3F52D4-67B8-4615-9991-AD6FE0BE8908}"
+	ProjectSection(ProjectDependencies) = postProject
+		{D5FCBE75-EAFC-458D-B1AB-D600659681D0} = {D5FCBE75-EAFC-458D-B1AB-D600659681D0}
+	EndProjectSection
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "tbbmalloc_proxy", "..\tbbmalloc_proxy\tbbmalloc_proxy.vcxproj", "{A4BAD0CB-4CC5-46D0-85E3-406699F4EB4F}"
 EndProject

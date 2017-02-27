@@ -29,6 +29,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "tbbmalloc_proxy", "..\tbbma
 		{CD3F52D4-67B8-4615-9991-AD6FE0BE8908} = {CD3F52D4-67B8-4615-9991-AD6FE0BE8908}
 	EndProjectSection
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "IntelTBB_Test", "..\IntelTBB_Test\IntelTBB_Test.vcxproj", "{D8B6A7FA-70B4-4088-B1DF-586CFDED8809}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Win32 = Debug|Win32
@@ -105,6 +107,12 @@ Global
 		{A4BAD0CB-4CC5-46D0-85E3-406699F4EB4F}.Release|Win32.Build.0 = Release|Win32
 		{A4BAD0CB-4CC5-46D0-85E3-406699F4EB4F}.Release|x64.ActiveCfg = Release|x64
 		{A4BAD0CB-4CC5-46D0-85E3-406699F4EB4F}.Release|x64.Build.0 = Release|x64
+		{D8B6A7FA-70B4-4088-B1DF-586CFDED8809}.Debug|Win32.ActiveCfg = Debug|Win32
+		{D8B6A7FA-70B4-4088-B1DF-586CFDED8809}.Debug|Win32.Build.0 = Debug|Win32
+		{D8B6A7FA-70B4-4088-B1DF-586CFDED8809}.Debug|x64.ActiveCfg = Debug|x64
+		{D8B6A7FA-70B4-4088-B1DF-586CFDED8809}.Release|Win32.ActiveCfg = Release|Win32
+		{D8B6A7FA-70B4-4088-B1DF-586CFDED8809}.Release|Win32.Build.0 = Release|Win32
+		{D8B6A7FA-70B4-4088-B1DF-586CFDED8809}.Release|x64.ActiveCfg = Release|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

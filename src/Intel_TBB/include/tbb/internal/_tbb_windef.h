@@ -64,7 +64,7 @@ namespace std {
 	        #pragma comment(lib, __TBB_STRING(__TBB_LIB_NAME))
         #else
 			#ifdef _DEBUG
-				#pragma comment(lib, "tbb_debug.lib")
+				#pragma comment(lib, "tbb.lib")
 			#else
 				#pragma comment(lib, "tbb.lib")
 			#endif

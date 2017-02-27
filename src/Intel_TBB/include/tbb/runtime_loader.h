@@ -31,8 +31,8 @@
 #if _MSC_VER
     #if ! __TBB_NO_IMPLICIT_LINKAGE
         #ifdef _DEBUG
-            #pragma comment( linker, "/nodefaultlib:tbb_debug.lib" )
-            #pragma comment( linker, "/defaultlib:tbbproxy_debug.lib" )
+            #pragma comment( linker, "/nodefaultlib:tbb.lib" )
+            #pragma comment( linker, "/defaultlib:tbbproxy.lib" )
         #else
             #pragma comment( linker, "/nodefaultlib:tbb.lib" )
             #pragma comment( linker, "/defaultlib:tbbproxy.lib" )

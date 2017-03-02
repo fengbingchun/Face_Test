@@ -34,3 +34,13 @@ matlab_runners/Action Unit Experiments/out_DISFA/
 matlab_runners/Action Unit Experiments/out_fera/
 matlab_runners/Demos/output_features_seq/
 matlab_runners/Demos/output_features_vid/
+/Debug/
+/Release/
+exe/FaceLandmarkImg/Debug/
+exe/FaceLandmarkVid/Debug/
+exe/FaceLandmarkVidMulti/Debug/
+exe/FeatureExtraction/Debug/
+exe/Recording/Debug/
+lib/3rdParty/dlib/Debug/
+lib/local/FaceAnalyser/Debug/
+lib/local/LandmarkDetector/Debug/

@@ -151,7 +151,8 @@ int main (int argc, char **argv)
 
 	// Get the input output file parameters
 	bool u;
-	LandmarkDetector::get_video_input_output_params(files, depth_directories, dummy_out, tracked_videos_output, u, arguments);
+	string output_codec;
+	LandmarkDetector::get_video_input_output_params(files, depth_directories, dummy_out, tracked_videos_output, u, output_codec, arguments);
 	// Get camera parameters
 	LandmarkDetector::get_camera_params(device, fx, fy, cx, cy, arguments);
 	
@@ -243,7 +244,14 @@ int main (int argc, char **argv)
 		cv::VideoWriter writerFace;
 		if(!tracked_videos_output.empty())
 		{
-			writerFace = cv::VideoWriter(tracked_videos_output[f_n], CV_FOURCC('D','I','V','X'), 30, captured_image.size(), true);
+			try
+			{
+				writerFace = cv::VideoWriter(tracked_videos_output[f_n], CV_FOURCC(output_codec[0],output_codec[1],output_codec[2],output_codec[3]), 30, captured_image.size(), true);
+			}
+			catch(cv::Exception e)
+			{
+				WARN_STREAM( "Could not open VideoWriter, OUTPUT FILE WILL NOT BE WRITTEN. Currently using codec " << output_codec << ", try using an other one (-oc option)");
+			}
 		}
 		
 		// For measuring the timings

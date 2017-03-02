@@ -29,5 +29,5 @@ include_directories(../LandmarkDetector/include)
 
 add_library( FaceAnalyser ${SOURCE} ${HEADERS})
 
-install (TARGETS FaceAnalyser DESTINATION bin)
-install (FILES ${HEADERS} DESTINATION include)
+install (TARGETS FaceAnalyser DESTINATION lib)
+install (FILES ${HEADERS} DESTINATION include/OpenFace)

@@ -9,7 +9,8 @@ The code was written mainly by Tadas Baltrusaitis during his time at the Languag
 
 Special thanks goes to Louis-Philippe Morency and his MultiComp Lab at Institute for Creative Technologies for help in writing and testing the code, and Erroll Wood for the gaze estimation work.
 
-**For instructions of how to install/compile/use the project please see [wiki](https://github.com/TadasBaltrusaitis/OpenFace/wiki)**
+## WIKI
+**For instructions of how to install/compile/use the project please see [WIKI](https://github.com/TadasBaltrusaitis/OpenFace/wiki)**
 
 More details about the project - http://www.cl.cam.ac.uk/research/rainbow/projects/openface/
 

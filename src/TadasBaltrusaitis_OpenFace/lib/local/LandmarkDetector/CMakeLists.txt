@@ -35,7 +35,7 @@ SET(HEADERS
 include_directories(./include)
 include_directories(${LandmarkDetector_SOURCE_DIR}/include)
 
-add_library( LandmarkDetector ${SOURCE} ${HEADERS})
+add_library( LandmarkDetector ${SOURCE} ${HEADERS} )
 
-install (TARGETS LandmarkDetector DESTINATION bin)
-install (FILES ${HEADERS} DESTINATION include)
+install (TARGETS LandmarkDetector DESTINATION lib)
+install (FILES ${HEADERS} DESTINATION include/OpenFace)

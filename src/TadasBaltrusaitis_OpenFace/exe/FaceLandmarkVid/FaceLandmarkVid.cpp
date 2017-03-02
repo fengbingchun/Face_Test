@@ -193,7 +193,8 @@ int main (int argc, char **argv)
 	
 	// Indicates that rotation should be with respect to world or camera coordinates
 	bool u;
-	LandmarkDetector::get_video_input_output_params(files, depth_directories, out_dummy, output_video_files, u, arguments);
+	string output_codec;
+	LandmarkDetector::get_video_input_output_params(files, depth_directories, out_dummy, output_video_files, u, output_codec, arguments);
 	
 	// The modules that are being used for tracking
 	LandmarkDetector::CLNF clnf_model(det_parameters.model_location);	
@@ -297,7 +298,14 @@ int main (int argc, char **argv)
 		cv::VideoWriter writerFace;
 		if (!output_video_files.empty())
 		{
-			writerFace = cv::VideoWriter(output_video_files[f_n], CV_FOURCC('D', 'I', 'V', 'X'), 30, captured_image.size(), true);
+			try
+ 			{
+				writerFace = cv::VideoWriter(output_video_files[f_n], CV_FOURCC(output_codec[0], output_codec[1], output_codec[2], output_codec[3]), 30, captured_image.size(), true);
+			}
+			catch(cv::Exception e)
+			{
+				WARN_STREAM( "Could not open VideoWriter, OUTPUT FILE WILL NOT BE WRITTEN. Currently using codec " << output_codec << ", try using an other one (-oc option)");
+			}
 		}
 
 		// Use for timestamping if using a webcam

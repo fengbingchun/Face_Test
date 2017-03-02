@@ -764,14 +764,16 @@ void FaceAnalyser::ExtractAllPredictionsOfflineReg(vector<std::pair<std::string,
 		// Perform a moving average of 3 frames
 		int window_size = 3;
 		vector<double> au_vals_tmp = au_iter->second;
-		for (size_t i = (window_size - 1) / 2; i < au_iter->second.size() - (window_size - 1) / 2; ++i)
+		for (int i = (window_size - 1) / 2; i < (int)au_iter->second.size() - (window_size - 1) / 2; ++i)
 		{
 			double sum = 0;
+			int count_over = 0;
 			for (int w = -(window_size - 1) / 2; w <= (window_size - 1) / 2; ++w)
 			{
 				sum += au_vals_tmp[i + w];
+				count_over++;
 			}
-			sum = sum / window_size;
+			sum = sum / count_over;
 
 			au_iter->second[i] = sum;
 		}
@@ -798,14 +800,16 @@ void FaceAnalyser::ExtractAllPredictionsOfflineClass(vector<std::pair<std::strin
 		// Perform a moving average of 7 frames on classifications
 		int window_size = 7;
 		vector<double> au_vals_tmp = au_vals;
-		for (size_t i = (window_size - 1)/2; i < au_vals.size() - (window_size - 1) / 2; ++i)
+		for (int i = (window_size - 1)/2; i < (int)au_vals.size() - (window_size - 1) / 2; ++i)
 		{
 			double sum = 0;
+			int count_over = 0;
 			for (int w = -(window_size - 1) / 2; w <= (window_size - 1) / 2; ++w)
 			{
 				sum += au_vals_tmp[i + w];
+				count_over++;
 			}
-			sum = sum / window_size;
+			sum = sum / count_over;
 			if (sum < 0.5)
 				sum = 0;
 			else

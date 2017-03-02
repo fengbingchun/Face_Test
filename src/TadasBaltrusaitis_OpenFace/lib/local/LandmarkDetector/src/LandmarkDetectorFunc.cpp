@@ -447,7 +447,7 @@ bool LandmarkDetector::DetectLandmarksInVideo(const cv::Mat_<uchar> &grayscale_i
 
 bool LandmarkDetector::DetectLandmarksInVideo(const cv::Mat_<uchar> &grayscale_image, const cv::Rect_<double> bounding_box, CLNF& clnf_model, FaceModelParameters& params)
 {
-	return DetectLandmarksInVideo(grayscale_image, cv::Mat_<float>(), clnf_model, params);
+	return DetectLandmarksInVideo(grayscale_image, cv::Mat_<float>(), bounding_box, clnf_model, params);
 }
 
 //================================================================================================================

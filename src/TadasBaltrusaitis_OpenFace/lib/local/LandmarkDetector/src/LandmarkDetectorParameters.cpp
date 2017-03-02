@@ -67,6 +67,11 @@
 // System includes
 #include <sstream>
 #include <iostream>
+#include <cstdlib>
+
+#ifndef CONFIG_DIR
+#define CONFIG_DIR "~"
+#endif
 
 using namespace std;
 
@@ -200,15 +205,25 @@ FaceModelParameters::FaceModelParameters(vector<string> &arguments)
 	}
 
 	// Make sure model_location is valid
-	if (!boost::filesystem::exists(boost::filesystem::path(model_location)))
+	// First check working directory, then the executable's directory, then the config path set by the build process.
+	boost::filesystem::path config_path = boost::filesystem::path(CONFIG_DIR);
+	boost::filesystem::path model_path = boost::filesystem::path(model_location);
+	if (boost::filesystem::exists(model_path))
 	{
-		model_location = (root / model_location).string();
-		if (!boost::filesystem::exists(boost::filesystem::path(model_location)))
-		{
-			std::cout << "Could not find the landmark detection model to load" << std::endl;
-		}
+		model_location = model_path.string();
 	}
-
+	else if (boost::filesystem::exists(root/model_path))
+	{
+		model_location = (root/model_path).string();
+	}
+	else if (boost::filesystem::exists(config_path/model_path))
+	{
+		model_location = (config_path/model_path).string();
+	}
+	else
+	{
+		std::cout << "Could not find the landmark detection model to load" << std::endl;
+	}
 }
 
 void FaceModelParameters::init()

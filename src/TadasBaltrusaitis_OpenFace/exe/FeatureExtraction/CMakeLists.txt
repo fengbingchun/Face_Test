@@ -14,3 +14,5 @@ target_link_libraries(FeatureExtraction FaceAnalyser)
 target_link_libraries(FeatureExtraction dlib)
 
 target_link_libraries(FeatureExtraction ${OpenCV_LIBS} ${Boost_LIBRARIES} ${TBB_LIBRARIES})
+
+install (TARGETS FeatureExtraction DESTINATION bin)

@@ -14,50 +14,57 @@ os:
   - linux  
   
 before_install:
+
+  # OpenCV dependencies and boost
+  - if [ ${TRAVIS_OS_NAME} = linux ]; then  
+      sudo apt-get install git libgtk2.0-dev pkg-config libavcodec-dev libavformat-dev libswscale-dev;      
+      sudo apt-get install python-dev python-numpy libtbb2 libtbb-dev libjpeg-dev libpng-dev libtiff-dev libjasper-dev libdc1394-22-dev checkinstall;
+      sudo add-apt-repository -y ppa:boost-latest/ppa;
+      sudo apt-get update;
+      sudo apt-get install libboost1.55-all-dev;
+      wget https://github.com/Itseez/opencv/archive/3.1.0.zip;
+      sudo unzip 3.1.0.zip;
+      cd opencv-3.1.0;
+      sudo mkdir build;
+      cd build;
+    fi
+
   # g++4.8.1
-  - if [ "$CXX" == "g++" ]; then
-      if [[ ${TRAVIS_OS_NAME} = linux ]]; then
+  - if [ "$CXX" = "g++" ]; then
+      if [ ${TRAVIS_OS_NAME} = linux ]; then
         sudo add-apt-repository -y ppa:ubuntu-toolchain-r/test; 
+        sudo apt-get update -qq;
+        sudo apt-get install -qq g++-4.8; 
+        export CXX="g++-4.8";		
+        sudo cmake -D CMAKE_BUILD_TYPE=RELEASE -D WITH_V4L=ON -D WITH_OPENCL=OFF -D INSTALL_C_EXAMPLES=OFF -D BUILD_EXAMPLES=OFF -D BUILD_TESTS=OFF -D BUILD_PERF_TESTS=OFF -D BUILD_EXAMPLES=OFF -D INSTALL_PYTHON_EXAMPLES=OFF ..;
       fi 
     fi
 
   # clang 3.4
-  - if [ "$CXX" == "clang++" ]; then
-      if [[ ${TRAVIS_OS_NAME} = linux ]]; then  
-        sudo add-apt-repository -y ppa:h-rayflood/llvm;
+  - if [ "$CXX" = "clang++" ]; then
+      if [ ${TRAVIS_OS_NAME} = linux ]; then  
+        $CXX --version;
+        sudo sed -i -e 's/^Defaults\tsecure_path.*$//' /etc/sudoers;
+        sudo cmake -D CMAKE_BUILD_TYPE=RELEASE -D WITH_V4L=ON -D WITH_OPENCL=OFF -D INSTALL_C_EXAMPLES=OFF -D BUILD_EXAMPLES=OFF -D BUILD_TESTS=OFF -D BUILD_PERF_TESTS=OFF -D BUILD_EXAMPLES=OFF -D INSTALL_PYTHON_EXAMPLES=OFF ..;
       fi
     fi
 
-  - if [[ ${TRAVIS_OS_NAME} = linux ]]; then sudo apt-get update -qq; fi
-  
-install:
-  - if [ "$CXX" == "g++" ]; then if [[ ${TRAVIS_OS_NAME} = linux ]]; then sudo apt-get install -qq g++-4.8; fi fi
-  - if [ "$CXX" == "g++" ]; then if [[ ${TRAVIS_OS_NAME} = linux ]]; then export CXX="g++-4.8"; fi fi 
-  - if [ "$CXX" == "clang++" ]; then if [[ ${TRAVIS_OS_NAME} = linux ]]; then sudo apt-get install -qq clang-3.4; fi fi
-  - if [ "$CXX" == "clang++" ]; then if [[ ${TRAVIS_OS_NAME} = linux ]]; then export CXX="clang++-3.4"; fi fi
+  - if [ ${TRAVIS_OS_NAME} = osx ]; then
+      brew update;
+      brew install tbb;
+      wget https://github.com/Itseez/opencv/archive/3.1.0.zip;
+      sudo unzip 3.1.0.zip;
+      cd opencv-3.1.0;
+      sudo mkdir build;
+      cd build;
+      sudo cmake -D CMAKE_BUILD_TYPE=RELEASE -D WITH_V4L=ON ..;
+    fi
 
-  - if [[ ${TRAVIS_OS_NAME} = linux ]]; then sudo apt-get install git libgtk2.0-dev pkg-config libavcodec-dev libavformat-dev libswscale-dev; fi
-  - if [[ ${TRAVIS_OS_NAME} = linux ]]; then sudo apt-get install python-dev python-numpy libtbb2 libtbb-dev libjpeg-dev libpng-dev libtiff-dev libjasper-dev libdc1394-22-dev checkinstall; fi
-    
-   # Getting newest boost
-  - if [[ ${TRAVIS_OS_NAME} = linux ]]; then sudo add-apt-repository -y ppa:boost-latest/ppa; fi
-  - if [[ ${TRAVIS_OS_NAME} = linux ]]; then sudo apt-get update; fi
-  - if [[ ${TRAVIS_OS_NAME} = linux ]]; then sudo apt-get install libboost1.55-all-dev; fi
-  
-  - if [[ ${TRAVIS_OS_NAME} = osx ]]; then brew update; fi
-  - if [[ ${TRAVIS_OS_NAME} = osx ]]; then brew tap homebrew/science; fi
-  - if [[ ${TRAVIS_OS_NAME} = osx ]]; then brew install tbb opencv3; fi
-    
 before_script:
-  - git clone https://github.com/Itseez/opencv.git
-  - cd opencv
-  - mkdir build
-  - cd build
-  - cmake ..
-  - make -j2
-  - sudo make -j2 install
-  - cd ../..
-
+  - sudo make -j4
+  - sudo make install
+  - cd ../.. 
+  
 script:
   - $CXX --version
   - mkdir build

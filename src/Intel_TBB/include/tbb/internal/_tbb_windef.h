@@ -24,6 +24,7 @@
 
 // Check that the target Windows version has all API calls requried for TBB.
 // Do not increase the version in condition beyond 0x0500 without prior discussion!
+#define _WIN32_WINNT 0x0501 // Note: fengbingchun add, because of Tadas_OpenFace_LandmarkDetector
 #if defined(_WIN32_WINNT) && _WIN32_WINNT<0x0501
 #error TBB is unable to run on old Windows versions; _WIN32_WINNT must be 0x0501 or greater.
 #endif

@@ -1,0 +1,190 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{FEC26178-EDFC-4BE0-B0E8-DCB72DD32109}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>Tadas_OpenFace_FaceAnalyser</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+    <OutDir>.\../../../obj/dbg/x64_vc12/Tadas_OpenFace_FaceAnalyser\</OutDir>
+    <IntDir>.\../../../obj/dbg/x64_vc12/Tadas_OpenFace_FaceAnalyser\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+    <OutDir>.\../../../obj/rel/x64_vc12/Tadas_OpenFace_FaceAnalyser\</OutDir>
+    <IntDir>.\../../../obj/rel/x64_vc12/Tadas_OpenFace_FaceAnalyser\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;_LIB;_SCL_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+      <PrecompiledHeaderOutputFile>.\../../../obj/dbg/x64_vc12/Tadas_OpenFace_FaceAnalyser\Tadas_OpenFace_FaceAnalyser.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>.\../../../obj/dbg/x64_vc12/Tadas_OpenFace_FaceAnalyser\</AssemblerListingLocation>
+      <ObjectFileName>.\../../../obj/dbg/x64_vc12/Tadas_OpenFace_FaceAnalyser\</ObjectFileName>
+      <ProgramDataBaseFileName>.\../../../obj/dbg/x64_vc12/Tadas_OpenFace_FaceAnalyser\</ProgramDataBaseFileName>
+      <AdditionalIncludeDirectories>E:\GitCode\Face_Test\src\TadasBaltrusaitis_OpenFace\lib\local\FaceAnalyser\include;D:\soft\OpenCV2.4.13\opencv\build\include;E:\GitCode\Face_Test\src\TadasBaltrusaitis_OpenFace\lib\local\LandmarkDetector\include;E:\GitCode\Face_Test\src\dlib;D:\ProgramFiles\local\boost_1_58_0;D:\ProgramFiles\local\boost_1_58_0\boost;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+    <Lib>
+      <OutputFile>../../../lib/dbg/x64_vc12/Tadas_OpenFace_FaceAnalyser.lib</OutputFile>
+    </Lib>
+    <Bscmake>
+      <OutputFile>.\../../../obj/dbg/x64_vc12/Tadas_OpenFace_FaceAnalyser\Tadas_OpenFace_FaceAnalyser.bsc</OutputFile>
+    </Bscmake>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+      <PrecompiledHeaderOutputFile>.\../../../obj/rel/x64_vc12/Tadas_OpenFace_FaceAnalyser\Tadas_OpenFace_FaceAnalyser.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>.\../../../obj/rel/x64_vc12/Tadas_OpenFace_FaceAnalyser\</AssemblerListingLocation>
+      <ObjectFileName>.\../../../obj/rel/x64_vc12/Tadas_OpenFace_FaceAnalyser\</ObjectFileName>
+      <ProgramDataBaseFileName>.\../../../obj/rel/x64_vc12/Tadas_OpenFace_FaceAnalyser\</ProgramDataBaseFileName>
+      <AdditionalIncludeDirectories>E:\GitCode\Face_Test\src\TadasBaltrusaitis_OpenFace\lib\local\FaceAnalyser\include;D:\soft\OpenCV2.4.13\opencv\build\include;E:\GitCode\Face_Test\src\TadasBaltrusaitis_OpenFace\lib\local\LandmarkDetector\include;E:\GitCode\Face_Test\src\dlib;D:\ProgramFiles\local\boost_1_58_0;D:\ProgramFiles\local\boost_1_58_0\boost;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+    <Lib>
+      <OutputFile>../../../lib/rel/x64_vc12/Tadas_OpenFace_FaceAnalyser.lib</OutputFile>
+    </Lib>
+    <Bscmake>
+      <OutputFile>.\../../../obj/rel/x64_vc12/Tadas_OpenFace_FaceAnalyser\Tadas_OpenFace_FaceAnalyser.bsc</OutputFile>
+    </Bscmake>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\src\TadasBaltrusaitis_OpenFace\lib\local\FaceAnalyser\include\FaceAnalyser.h" />
+    <ClInclude Include="..\..\..\src\TadasBaltrusaitis_OpenFace\lib\local\FaceAnalyser\include\Face_utils.h" />
+    <ClInclude Include="..\..\..\src\TadasBaltrusaitis_OpenFace\lib\local\FaceAnalyser\include\GazeEstimation.h" />
+    <ClInclude Include="..\..\..\src\TadasBaltrusaitis_OpenFace\lib\local\FaceAnalyser\include\SVM_dynamic_lin.h" />
+    <ClInclude Include="..\..\..\src\TadasBaltrusaitis_OpenFace\lib\local\FaceAnalyser\include\SVM_static_lin.h" />
+    <ClInclude Include="..\..\..\src\TadasBaltrusaitis_OpenFace\lib\local\FaceAnalyser\include\SVR_dynamic_lin_regressors.h" />
+    <ClInclude Include="..\..\..\src\TadasBaltrusaitis_OpenFace\lib\local\FaceAnalyser\include\SVR_static_lin_regressors.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\src\TadasBaltrusaitis_OpenFace\lib\local\FaceAnalyser\src\FaceAnalyser.cpp" />
+    <ClCompile Include="..\..\..\src\TadasBaltrusaitis_OpenFace\lib\local\FaceAnalyser\src\Face_utils.cpp" />
+    <ClCompile Include="..\..\..\src\TadasBaltrusaitis_OpenFace\lib\local\FaceAnalyser\src\GazeEstimation.cpp" />
+    <ClCompile Include="..\..\..\src\TadasBaltrusaitis_OpenFace\lib\local\FaceAnalyser\src\SVM_dynamic_lin.cpp" />
+    <ClCompile Include="..\..\..\src\TadasBaltrusaitis_OpenFace\lib\local\FaceAnalyser\src\SVM_static_lin.cpp" />
+    <ClCompile Include="..\..\..\src\TadasBaltrusaitis_OpenFace\lib\local\FaceAnalyser\src\SVR_dynamic_lin_regressors.cpp" />
+    <ClCompile Include="..\..\..\src\TadasBaltrusaitis_OpenFace\lib\local\FaceAnalyser\src\SVR_static_lin_regressors.cpp" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

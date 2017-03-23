@@ -35,6 +35,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Tadas_OpenFace_LandmarkDete
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Tadas_OpenFace_FaceAnalyser", "..\Tadas_OpenFace_FaceAnalyser\Tadas_OpenFace_FaceAnalyser.vcxproj", "{FEC26178-EDFC-4BE0-B0E8-DCB72DD32109}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Tadas_OpenFace_Test", "..\Tadas_OpenFace_Test\Tadas_OpenFace_Test.vcxproj", "{4F391A0E-DB43-4D34-9F7C-9BCEB871390D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Win32 = Debug|Win32
@@ -129,6 +131,12 @@ Global
 		{FEC26178-EDFC-4BE0-B0E8-DCB72DD32109}.Release|Win32.ActiveCfg = Release|Win32
 		{FEC26178-EDFC-4BE0-B0E8-DCB72DD32109}.Release|Win32.Build.0 = Release|Win32
 		{FEC26178-EDFC-4BE0-B0E8-DCB72DD32109}.Release|x64.ActiveCfg = Release|x64
+		{4F391A0E-DB43-4D34-9F7C-9BCEB871390D}.Debug|Win32.ActiveCfg = Debug|Win32
+		{4F391A0E-DB43-4D34-9F7C-9BCEB871390D}.Debug|Win32.Build.0 = Debug|Win32
+		{4F391A0E-DB43-4D34-9F7C-9BCEB871390D}.Debug|x64.ActiveCfg = Debug|x64
+		{4F391A0E-DB43-4D34-9F7C-9BCEB871390D}.Release|Win32.ActiveCfg = Release|Win32
+		{4F391A0E-DB43-4D34-9F7C-9BCEB871390D}.Release|Win32.Build.0 = Release|Win32
+		{4F391A0E-DB43-4D34-9F7C-9BCEB871390D}.Release|x64.ActiveCfg = Release|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

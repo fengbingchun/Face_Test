@@ -3,7 +3,7 @@
 
 int main()
 {
-	int ret = test();
+	int ret = test_FaceLandmarkImg();
 
 	if (ret == 0) fprintf(stderr, "test success\n");
 	else fprintf(stderr, "test fail\n");

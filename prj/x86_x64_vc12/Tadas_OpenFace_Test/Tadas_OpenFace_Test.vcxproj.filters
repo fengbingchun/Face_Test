@@ -26,5 +26,8 @@
     <ClCompile Include="..\..\..\demo\Tadas_OpenFace_Test\Tadas_OpenFace_Test.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\..\demo\Tadas_OpenFace_Test\FaceLandmarkImg.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

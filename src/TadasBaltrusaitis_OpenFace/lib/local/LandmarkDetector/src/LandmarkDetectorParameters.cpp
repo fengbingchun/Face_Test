@@ -69,7 +69,7 @@
 #include <cstdlib>
 
 #ifndef CONFIG_DIR
-#define CONFIG_DIR "~"
+#define CONFIG_DIR "E:/GitCode/Face_Test/src/TadasBaltrusaitis_OpenFace/lib/local/LandmarkDetector/"
 #endif
 
 using namespace std;
@@ -280,6 +280,13 @@ void FaceModelParameters::init()
 	face_detector_location = "classifiers/haarcascade_frontalface_alt.xml";
 #else
 	face_detector_location = "classifiers/haarcascade_frontalface_alt.xml";
+
+	boost::filesystem::path config_path = boost::filesystem::path(CONFIG_DIR);
+	boost::filesystem::path detector_path = boost::filesystem::path(face_detector_location);
+
+	if (boost::filesystem::exists(config_path/detector_path)) {
+		face_detector_location = (config_path / detector_path).string();
+	}
 #endif
 
 	quiet_mode = false;

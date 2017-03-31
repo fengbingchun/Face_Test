@@ -1,3 +1,5 @@
 1. Intel TBB: tbb2017_20161128oss_src.tgz
 2. TadasBaltrusaitis OpenFace: v0.2.3, 2017.01.06
-	Note: remove matlab_runners、matlab_version、lib/3rdParty directory
+	Note:
+		(1): remove matlab_runners、matlab_version、lib/3rdParty directory
+		(2): add AU_predictors and classifiers in lib/local/LandmarkDetector directory, they from OpenFace_0.2.3_win_x64.zip

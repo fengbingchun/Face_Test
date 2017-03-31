@@ -36,6 +36,10 @@ EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Tadas_OpenFace_FaceAnalyser", "..\Tadas_OpenFace_FaceAnalyser\Tadas_OpenFace_FaceAnalyser.vcxproj", "{FEC26178-EDFC-4BE0-B0E8-DCB72DD32109}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Tadas_OpenFace_Test", "..\Tadas_OpenFace_Test\Tadas_OpenFace_Test.vcxproj", "{4F391A0E-DB43-4D34-9F7C-9BCEB871390D}"
+	ProjectSection(ProjectDependencies) = postProject
+		{B4F4DE17-9A1D-4365-8E1C-D7E07747407E} = {B4F4DE17-9A1D-4365-8E1C-D7E07747407E}
+		{FEC26178-EDFC-4BE0-B0E8-DCB72DD32109} = {FEC26178-EDFC-4BE0-B0E8-DCB72DD32109}
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

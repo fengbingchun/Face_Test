@@ -3,6 +3,7 @@
 - libfacedetection [ShiqiYu GitHub](https://github.com/ShiqiYu/libfacedetection)
 - SeetaFaceEngine [seetaface GitHub](https://github.com/seetaface/SeetaFaceEngine)
 - Dlib [davisking GitHub](https://github.com/davisking/dlib)
+- OpenFace [TadasBaltrusaitis/OpenFace GitHub](https://github.com/TadasBaltrusaitis/OpenFace)
 
 **The project support platform: windows7/10 64 bits. It can be directly build with VS2013 in windows7/10 64bits.**
 

@@ -170,7 +170,6 @@
     <ClInclude Include="..\..\..\demo\Tadas_OpenFace_Test\funset.hpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\..\demo\Tadas_OpenFace_Test\FaceLandmarkImg.cpp" />
     <ClCompile Include="..\..\..\demo\Tadas_OpenFace_Test\funset.cpp" />
     <ClCompile Include="..\..\..\demo\Tadas_OpenFace_Test\Tadas_OpenFace_Test.cpp" />
   </ItemGroup>

@@ -123,7 +123,7 @@
       <AssemblerListingLocation>.\../../../obj/rel/x64_vc12/libfacedetection_Test\</AssemblerListingLocation>
       <ObjectFileName>.\../../../obj/rel/x64_vc12/libfacedetection_Test\</ObjectFileName>
       <ProgramDataBaseFileName>.\../../../obj/rel/x64_vc12/libfacedetection_Test\</ProgramDataBaseFileName>
-      <AdditionalIncludeDirectories>D:\soft\OpenCV2.4.9\opencv-2.4.9\opencv\build\include;E:\GitCode\Face_Test\src\libfacedetection\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>E:\GitCode\Face_Test\src\libfacedetection\include;D:\soft\OpenCV2.4.13\opencv\build\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -131,8 +131,8 @@
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
       <OutputFile>../../../lib/rel/x64_vc12/libfacedetection_Test.exe</OutputFile>
-      <AdditionalDependencies>libfacedetect-x64.lib;opencv_core249.lib;opencv_highgui249.lib;opencv_imgproc249.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <AdditionalLibraryDirectories>D:\soft\OpenCV2.4.9\opencv-2.4.9\opencv\build\x64\vc12\lib;E:\GitCode\Face_Test\src\libfacedetection\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>libfacedetect-x64.lib;opencv_core2413.lib;opencv_highgui2413.lib;opencv_imgproc2413.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>E:\GitCode\Face_Test\src\libfacedetection\lib;D:\soft\OpenCV2.4.13\opencv\build\x64\vc12\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
     <Bscmake>
       <OutputFile>.\../../../obj/rel/x64_vc12/libfacedetection_Test\libfacedetection_Test.bsc</OutputFile>

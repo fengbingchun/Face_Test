@@ -15,6 +15,7 @@
 */
 int test_face_detect()
 {
+	// Blog: http://blog.csdn.net/fengbingchun/article/details/53493305
 	dlib::frontal_face_detector detector = dlib::get_frontal_face_detector();
 
 	std::vector<std::string> images{ "1.jpg", "2.jpg", "3.jpg", "4.jpeg", "5.jpeg", "6.jpg", "7.jpg", "8.jpg", "9.jpg", "10.jpg",
@@ -101,6 +102,7 @@ int test_face_detect()
 */
 int test_face_landmark()
 {
+	// Blog: http://blog.csdn.net/fengbingchun/article/details/53646947
 	// download: http://dlib.net/files/shape_predictor_68_face_landmarks.dat.bz2
 	const std::string shape_predictor_68_face_landmarks = "E:/GitCode/Face_Test/src/dlib/data/shape_predictor_68_face_landmarks.dat";
 

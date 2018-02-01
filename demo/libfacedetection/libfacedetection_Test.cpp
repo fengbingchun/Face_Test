@@ -6,6 +6,7 @@
 
 int main()
 {
+	// Blog: http://blog.csdn.net/fengbingchun/article/details/52964163
 	std::vector<std::string> images{ "1.jpg", "2.jpg", "3.jpg", "4.jpeg", "5.jpeg", "6.jpg", "7.jpg", "8.jpg", "9.jpg", "10.jpg",
 		"11.jpeg", "12.jpg", "13.jpeg", "14.jpg", "15.jpeg", "16.jpg", "17.jpg", "18.jpg", "19.jpg", "20.jpg" };
 	std::vector<int> count_faces{1, 2, 6, 0, 1, 1, 1, 2, 1, 1,

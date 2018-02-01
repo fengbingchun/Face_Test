@@ -99,6 +99,7 @@ int test_face_landmark()
 
 int test_FaceDetect_HaarCascade()
 {
+	// Blog: http://blog.csdn.net/fengbingchun/article/details/70147435
 	std::vector<std::string> arguments{ "", "-wild", "-fdir", "E:/GitCode/Face_Test/testdata/",
 		"-ofdir", "E:/GitCode/Face_Test/testdata/ret1/", "-oidir", "E:/GitCode/Face_Test/testdata/ret2/" };
 
@@ -167,6 +168,7 @@ int test_FaceDetect_HaarCascade()
 
 int test_FaceDetect_HOG()
 {
+	// Blog: http://blog.csdn.net/fengbingchun/article/details/70146734
 	std::vector<std::string> arguments{ "", "-wild", "-fdir", "E:/GitCode/Face_Test/testdata/",
 		"-ofdir", "E:/GitCode/Face_Test/testdata/ret1/", "-oidir", "E:/GitCode/Face_Test/testdata/ret2/" };
 

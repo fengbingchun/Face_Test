@@ -8,6 +8,7 @@
 
 int test_detection()
 {
+	// Blog: http://blog.csdn.net/fengbingchun/article/details/53178060
 	std::vector<std::string> images{ "1.jpg", "2.jpg", "3.jpg", "4.jpeg", "5.jpeg", "6.jpg", "7.jpg", "8.jpg", "9.jpg", "10.jpg",
 		"11.jpeg", "12.jpg", "13.jpeg", "14.jpg", "15.jpeg", "16.jpg", "17.jpg", "18.jpg", "19.jpg", "20.jpg" };
 	std::vector<int> count_faces{ 1, 2, 6, 0, 1, 1, 1, 2, 1, 1,
@@ -79,6 +80,7 @@ int test_detection()
 
 int test_alignment()
 {
+	// Blog: http://blog.csdn.net/fengbingchun/article/details/53192059
 	std::vector<std::string> images{ "1.jpg", "2.jpg", "3.jpg", "4.jpeg", "5.jpeg", "6.jpg", "7.jpg", "8.jpg", "9.jpg", "10.jpg",
 		"11.jpeg", "12.jpg", "13.jpeg", "14.jpg", "15.jpeg", "16.jpg", "17.jpg", "18.jpg", "19.jpg", "20.jpg" };
 	std::vector<int> count_faces{ 1, 2, 6, 0, 1, 1, 1, 2, 1, 1,
@@ -158,6 +160,7 @@ int test_alignment()
 
 int test_recognize()
 {
+	// Blog: http://blog.csdn.net/fengbingchun/article/details/53311956
 	const std::string path_images{ "E:/GitCode/Face_Test/testdata/recognization/" };
 	seeta::FaceDetection detector("E:/GitCode/Face_Test/src/SeetaFaceEngine/FaceDetection/model/seeta_fd_frontal_v1.0.bin");
 	seeta::FaceAlignment alignment("E:/GitCode/Face_Test/src/SeetaFaceEngine/FaceAlignment/model/seeta_fa_v1.1.bin");

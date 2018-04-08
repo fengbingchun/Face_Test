@@ -18,12 +18,12 @@ int test_face_detect()
 	// Blog: http://blog.csdn.net/fengbingchun/article/details/53493305
 	dlib::frontal_face_detector detector = dlib::get_frontal_face_detector();
 
-	std::vector<std::string> images{ "1.jpg", "2.jpg", "3.jpg", "4.jpeg", "5.jpeg", "6.jpg", "7.jpg", "8.jpg", "9.jpg", "10.jpg",
-		"11.jpeg", "12.jpg", "13.jpeg", "14.jpg", "15.jpeg", "16.jpg", "17.jpg", "18.jpg", "19.jpg", "20.jpg" };
+	std::vector<std::string> images{ "1.jpg", "2.jpg", "3.jpg", "4.jpg", "5.jpg", "6.jpg", "7.jpg", "8.jpg", "9.jpg", "10.jpg",
+		"11.jpg", "12.jpg", "13.jpg", "14.jpg", "15.jpg", "16.jpg", "17.jpg", "18.jpg", "19.jpg", "20.jpg" };
 	std::vector<int> count_faces{ 1, 2, 6, 0, 1, 1, 1, 2, 1, 1,
 		1, 1, 1, 1, 1, 1, 1, 0, 8, 2 };
 
-	std::string path_images{ "E:/GitCode/Face_Test/testdata/" };
+	std::string path_images{ "E:/GitCode/Face_Test/testdata/detection/" };
 
 	if (images.size() != count_faces.size()) {
 		fprintf(stderr, "their size that images and count_faces are mismatch\n");
@@ -115,12 +115,12 @@ int test_face_landmark()
 	dlib::shape_predictor sp;
 	dlib::deserialize(shape_predictor_68_face_landmarks) >> sp;
 
-	std::vector<std::string> images{ "1.jpg", "2.jpg", "3.jpg", "4.jpeg", "5.jpeg", "6.jpg", "7.jpg", "8.jpg", "9.jpg", "10.jpg",
-		"11.jpeg", "12.jpg", "13.jpeg", "14.jpg", "15.jpeg", "16.jpg", "17.jpg", "18.jpg", "19.jpg", "20.jpg" };
+	std::vector<std::string> images{ "1.jpg", "2.jpg", "3.jpg", "4.jpg", "5.jpg", "6.jpg", "7.jpg", "8.jpg", "9.jpg", "10.jpg",
+		"11.jpg", "12.jpg", "13.jpg", "14.jpg", "15.jpg", "16.jpg", "17.jpg", "18.jpg", "19.jpg", "20.jpg" };
 	std::vector<int> count_faces{ 1, 2, 6, 0, 1, 1, 1, 2, 1, 1,
 		1, 1, 1, 1, 1, 1, 1, 0, 8, 2 };
 
-	std::string path_images{ "E:/GitCode/Face_Test/testdata/" };
+	std::string path_images{ "E:/GitCode/Face_Test/testdata/detection/" };
 
 	if (images.size() != count_faces.size()) {
 		fprintf(stderr, "their size that images and count_faces are mismatch\n");

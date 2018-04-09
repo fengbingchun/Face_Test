@@ -13,7 +13,7 @@
 	- face alignment(68 points)
 - OpenFace [TadasBaltrusaitis/OpenFace GitHub](https://github.com/TadasBaltrusaitis/OpenFace)
 	- face detection
-- OpenCV [OpenCV GitHub](https://github.com/opencv/opencv
+- OpenCV [OpenCV GitHub](https://github.com/opencv/opencv)
 	- face detection(LBP)
 
 **The project support platform: windows7/10 64 bits. It can be directly build with VS2013 in windows7/10 64bits.**

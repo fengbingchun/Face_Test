@@ -3,7 +3,6 @@
 
 int main()
 {
-
 	int ret = test_face_landmark();
 
 	if (ret == 0) fprintf(stderr, "test success\n");

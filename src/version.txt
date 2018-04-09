@@ -20,3 +20,7 @@
 	commit: 2f6cbeb
 	date: 2017.12.29
 	url: https://github.com/ShiqiYu/libfacedetection
+6. OpenCV:
+	version: 3.3.0
+	date: 2017.08.04
+	url: https://github.com/opencv/opencv/releases

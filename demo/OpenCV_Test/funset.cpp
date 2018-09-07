@@ -6,7 +6,11 @@
 
 namespace {
 
-const std::string images_path_detect{ "E:/GitCode/Face_Test/testdata/detection/" };
+#ifdef _MSC_VER
+	const std::string images_path_detect{ "E:/GitCode/Face_Test/testdata/detection/" };
+#else
+	const std::string images_path_detect{ "testdata/detection/" };
+#endif
 const std::vector<std::string> images_name_detect{ "1.jpg", "2.jpg", "3.jpg", "4.jpg", "5.jpg", "6.jpg", "7.jpg", "8.jpg", "9.jpg", "10.jpg",
 	"11.jpg", "12.jpg", "13.jpg", "14.jpg", "15.jpg", "16.jpg", "17.jpg", "18.jpg", "19.jpg", "20.jpg" };
 
@@ -37,7 +41,11 @@ void save_mats()
 int test_face_detect_LBP()
 {
 	// Blog: https://blog.csdn.net/fengbingchun/article/details/79867667
+#ifdef _MSC_VER
 	const std::string lbp_files_path{ "E:/GitCode/Face_Test/testdata/lbpcascades/" };
+#else
+	const std::string lbp_files_path{ "testdata/lbpcascades/" };
+#endif
 	const std::vector<std::string> lbpcascades_files{ "lbpcascade_frontalface.xml", "lbpcascade_frontalface_improved.xml", "lbpcascade_profileface.xml" };
 
 	cv::CascadeClassifier face_cascade(lbp_files_path+lbpcascades_files[0]);
@@ -66,7 +74,6 @@ int test_face_detect_LBP()
 			return -1;
 		}
 		fprintf(stdout, "image name: %s: size(width, height): (%d, %d)\n", images_name_detect[i].c_str(), gray.cols, gray.rows);
-
 		// possibly shrink the image to run much faster.
 		cv::Mat resized, equalized;
 		float scale = gray.cols / (float)scaled_width;

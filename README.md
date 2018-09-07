@@ -16,7 +16,10 @@
 - OpenCV [OpenCV GitHub](https://github.com/opencv/opencv)
 	- face detection(LBP)
 
-**The project support platform: windows7/10 64 bits. It can be directly build with VS2013 in windows7/10 64bits.**
+**The project support platform:**
+- windows7/10 64 bits: It can be directly build with VS2013 in windows7/10 64bits.
+- Linux:
+	- OpenCV_Test support cmake build(file position: prj/linux_cmake_OpenCV_Test)
 
 **Screenshot:**  
 ![](https://github.com/fengbingchun/Face_Test/blob/master/prj/x86_x64_vc12/Screenshot.png)

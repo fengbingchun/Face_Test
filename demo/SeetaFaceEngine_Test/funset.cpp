@@ -6,6 +6,17 @@
 #include <face_identification.h>
 #include <opencv2/opencv.hpp>
 
+#ifdef __linux__
+int fopen_s(FILE **f, const char *name, const char *mode)
+{
+	int ret = 0;
+    	assert(f);
+    	*f = fopen(name, mode);
+    	if (!*f) ret = -1;
+    	return ret;
+}
+#endif
+
 int test_detection()
 {
 	// Blog: http://blog.csdn.net/fengbingchun/article/details/53178060
@@ -14,9 +25,14 @@ int test_detection()
 	std::vector<int> count_faces{ 1, 2, 6, 0, 1, 1, 1, 2, 1, 1,
 		1, 1, 1, 1, 1, 1, 1, 0, 8, 2 };
 
+#ifdef _MSC_VER
 	const std::string path_images{ "E:/GitCode/Face_Test/testdata/detection/" };
-
 	seeta::FaceDetection detector("E:/GitCode/Face_Test/src/SeetaFaceEngine/FaceDetection/model/seeta_fd_frontal_v1.0.bin");
+#else
+	const std::string path_images{ "testdata/detection/" };
+	seeta::FaceDetection detector("testdata/seeta_fd_frontal_v1.0.bin");
+#endif
+
 
 	detector.SetMinFaceSize(20);
 	detector.SetMaxFaceSize(200);
@@ -86,17 +102,24 @@ int test_alignment()
 	std::vector<int> count_faces{ 1, 2, 6, 0, 1, 1, 1, 2, 1, 1,
 		1, 1, 1, 1, 1, 1, 1, 0, 8, 2 };
 
+#ifdef _MSC_VER
 	const std::string path_images{ "E:/GitCode/Face_Test/testdata/detection/" };
-
 	seeta::FaceDetection detector("E:/GitCode/Face_Test/src/SeetaFaceEngine/FaceDetection/model/seeta_fd_frontal_v1.0.bin");
-
+#else
+	const std::string path_images{ "testdata/detection/" };
+	seeta::FaceDetection detector("testdata/seeta_fd_frontal_v1.0.bin");
+#endif
 	detector.SetMinFaceSize(20);
 	detector.SetMaxFaceSize(200);
 	detector.SetScoreThresh(2.f);
 	detector.SetImagePyramidScaleFactor(0.8f);
 	detector.SetWindowStep(4, 4);
 
+#ifdef _MSC_VER
 	seeta::FaceAlignment point_detector("E:/GitCode/Face_Test/src/SeetaFaceEngine/FaceAlignment/model/seeta_fa_v1.1.bin");
+#else
+	seeta::FaceAlignment point_detector("testdata/seeta_fa_v1.1.bin");
+#endif
 
 	for (auto name : images) {
 		fprintf(stderr, "start detect image: %s\n", name.c_str());
@@ -161,10 +184,17 @@ int test_alignment()
 int test_recognize()
 {
 	// Blog: http://blog.csdn.net/fengbingchun/article/details/53311956
+#ifdef _MSC_VER
 	const std::string path_images{ "E:/GitCode/Face_Test/testdata/recognization/" };
 	seeta::FaceDetection detector("E:/GitCode/Face_Test/src/SeetaFaceEngine/FaceDetection/model/seeta_fd_frontal_v1.0.bin");
 	seeta::FaceAlignment alignment("E:/GitCode/Face_Test/src/SeetaFaceEngine/FaceAlignment/model/seeta_fa_v1.1.bin");
 	seeta::FaceIdentification face_recognizer("E:/GitCode/Face_Test/src/SeetaFaceEngine/FaceIdentification/model/seeta_fr_v1.0.bin");
+#else
+	const std::string path_images{ "testdata/recognization/" };
+	seeta::FaceDetection detector("testdata/seeta_fd_frontal_v1.0.bin");
+	seeta::FaceAlignment alignment("testdata/seeta_fa_v1.1.bin");
+	seeta::FaceIdentification face_recognizer("testdata/seeta_fr_v1.0.bin");
+#endif
 
 	detector.SetMinFaceSize(20);
 	detector.SetMaxFaceSize(200);
@@ -332,8 +362,13 @@ int test_recognize()
 int test_identification_CropFace()
 {
 	seeta::FaceIdentification face_recognizer(nullptr);
+#ifdef _MSC_VER
 	std::string test_dir = "E:/GitCode/Face_Test/src/SeetaFaceEngine/FaceIdentification/data/test_face_recognizer/";
 	std::string save_dir = "E:/GitCode/Face_Test/testdata/";
+#else
+	std::string test_dir = "testdata/data/test_face_recognizer/";
+	std::string save_dir = "testdata/";
+#endif
 
 	// data initialize
 	std::ifstream ifs;
@@ -384,9 +419,13 @@ int test_identification_CropFace()
 
 int test_identification_ExtractFeature()
 {
+#ifdef _MSC_VER
 	seeta::FaceIdentification face_recognizer("E:/GitCode/Face_Test/src/SeetaFaceEngine/FaceIdentification/model/seeta_fr_v1.0.bin");
 	std::string test_dir = "E:/GitCode/Face_Test/src/SeetaFaceEngine/FaceIdentification/data/test_face_recognizer/";
-
+#else
+	seeta::FaceIdentification face_recognizer("testdata/seeta_fr_v1.0.bin");
+	std::string test_dir = "testdata/data/test_face_recognizer/";
+#endif
 	int feat_size = face_recognizer.feature_size();
 	if (feat_size != 2048) {
 		fprintf(stderr, "feature size mismatch: %d\n", feat_size);

@@ -23,7 +23,11 @@ int test_face_detect()
 	std::vector<int> count_faces{ 1, 2, 6, 0, 1, 1, 1, 2, 1, 1,
 		1, 1, 1, 1, 1, 1, 1, 0, 8, 2 };
 
+#ifdef _MSC_VER
 	std::string path_images{ "E:/GitCode/Face_Test/testdata/detection/" };
+#else
+	std::string path_images{ "testdata/detection/" };
+#endif
 
 	if (images.size() != count_faces.size()) {
 		fprintf(stderr, "their size that images and count_faces are mismatch\n");
@@ -104,7 +108,11 @@ int test_face_landmark()
 {
 	// Blog: http://blog.csdn.net/fengbingchun/article/details/53646947
 	// download: http://dlib.net/files/shape_predictor_68_face_landmarks.dat.bz2
+#ifdef _MSC_VER
 	const std::string shape_predictor_68_face_landmarks = "E:/GitCode/Face_Test/src/dlib/data/shape_predictor_68_face_landmarks.dat";
+#else
+	const std::string shape_predictor_68_face_landmarks = "testdata/shape_predictor_68_face_landmarks.dat";
+#endif
 
 	// We need a face detector.  We will use this to get bounding boxes for
 	// each face in an image.
@@ -120,7 +128,11 @@ int test_face_landmark()
 	std::vector<int> count_faces{ 1, 2, 6, 0, 1, 1, 1, 2, 1, 1,
 		1, 1, 1, 1, 1, 1, 1, 0, 8, 2 };
 
+#ifdef _MSC_VER
 	std::string path_images{ "E:/GitCode/Face_Test/testdata/detection/" };
+#else
+	std::string path_images{ "testdata/detection/" };
+#endif
 
 	if (images.size() != count_faces.size()) {
 		fprintf(stderr, "their size that images and count_faces are mismatch\n");

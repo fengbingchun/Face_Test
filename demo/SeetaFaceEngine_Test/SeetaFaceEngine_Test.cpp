@@ -3,10 +3,10 @@
 
 int main()
 {
-	int ret = test_alignment();
+	int ret = test_identification_ExtractFeatureWithCrop();
 
-	if (ret == 0) fprintf(stderr, "test success\n");
-	else fprintf(stderr, "test fail\n");
+	if (ret == 0) fprintf(stdout, "====== test success ======\n");
+	else fprintf(stderr, "###### test fail ######\n");
 
 	return 0;
 }

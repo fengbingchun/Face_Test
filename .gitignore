@@ -7,4 +7,10 @@
 /testdata/
 /prj/linux_cmake_OpenCV_Test/build/
 /prj/linux_cmake_OpenCV_Test/testdata
-
+/prj/linux_cmake_Dlib_Test/build/
+/prj/linux_cmake_Dlib_Test/testdata
+/prj/linux_cmake_IntelTBB_Test/build/
+/prj/linux_cmake_IntelTBB_Test/testdata
+/prj/linux_cmake_SeetaFaceEngine_Test/build/
+/prj/linux_cmake_SeetaFaceEngine_Test/testdata
+/src/SeetaFaceEngine/FaceAlignment/build/

@@ -2,6 +2,8 @@
 #include <iostream>
 #include <tbb/tbb.h>
 
+// Blog: https://blog.csdn.net/fengbingchun/article/details/58281829
+
 // reference: http://www.ibm.com/developerworks/cn/aix/library/au-intelthreadbuilding/
 class first_task : public tbb::task {
 public:

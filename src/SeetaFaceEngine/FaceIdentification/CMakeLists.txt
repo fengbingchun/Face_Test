@@ -24,7 +24,7 @@ set(VIPLNET_SRC_DIR ${PROJECT_SOURCE_DIR}/src)
 include_directories(${VIPLNET_INCLUDE_DIR})
 include_directories(${VIPLNET_SRC_DIR})
 
-add_subdirectory(src)
+#add_subdirectory(src)
 
 aux_source_directory(./src SRC_LIST)
 aux_source_directory(./tools TOOLS_LIST)

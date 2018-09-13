@@ -20,6 +20,9 @@
 - windows7/10 64 bits: It can be directly build with VS2013 in windows7/10 64bits.
 - Linux:
 	- OpenCV_Test support cmake build(file position: prj/linux_cmake_OpenCV_Test)
+	- Dlib_Test support cmake build(file position: prj/linux_cmake_Dlib_Test)
+	- IntelTBB_Test support cmake build(file position: prj/linux_cmake_IntelTBB_Test)
+	- SeetaFaceEngine_Test support cmake build(file position: prj/linux_cmake_SeetaFaceEngine_Test)
 
 **Screenshot:**  
 ![](https://github.com/fengbingchun/Face_Test/blob/master/prj/x86_x64_vc12/Screenshot.png)

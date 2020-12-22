@@ -164,10 +164,10 @@ private:
 
 	// Use histograms for quick (but approximate) median computation
 	// Use the same for
-	vector<cv::Mat_<unsigned int> > hog_desc_hist;
+	vector<cv::Mat_<float> > hog_desc_hist;
 
 	// This is not being used at the moment as it is a bit slow
-	vector<cv::Mat_<unsigned int> > face_image_hist;
+	vector<cv::Mat_<float> > face_image_hist;
 	vector<int> face_image_hist_sum;
 
 	vector<cv::Vec3d> head_orientations;
@@ -183,7 +183,7 @@ private:
 	cv::Mat_<double> geom_descriptor_median;
 	
 	int geom_hist_sum;
-	cv::Mat_<unsigned int> geom_desc_hist;
+	cv::Mat_<float> geom_desc_hist;
 	int num_bins_geom;
 	double min_val_geom;
 	double max_val_geom;
@@ -205,8 +205,8 @@ private:
 	// A utility function for keeping track of approximate running medians used for AU and emotion inference using a set of histograms (the histograms are evenly spaced from min_val to max_val)
 	// Descriptor has to be a row vector
 	// TODO this duplicates some other code
-	void UpdateRunningMedian(cv::Mat_<unsigned int>& histogram, int& hist_sum, cv::Mat_<double>& median, const cv::Mat_<double>& descriptor, bool update, int num_bins, double min_val, double max_val);
-	void ExtractMedian(cv::Mat_<unsigned int>& histogram, int hist_count, cv::Mat_<double>& median, int num_bins, double min_val, double max_val);
+	void UpdateRunningMedian(cv::Mat_<float>& histogram, int& hist_sum, cv::Mat_<double>& median, const cv::Mat_<double>& descriptor, bool update, int num_bins, double min_val, double max_val);
+	void ExtractMedian(cv::Mat_<float>& histogram, int hist_count, cv::Mat_<double>& median, int num_bins, double min_val, double max_val);
 	
 	// The linear SVR regressors
 	SVR_static_lin_regressors AU_SVR_static_appearance_lin_regressors;
@@ -218,12 +218,12 @@ private:
 
 	// The AUs predicted by the model are not always 0 calibrated to a person. That is they don't always predict 0 for a neutral expression
 	// Keeping track of the predictions we can correct for this, by assuming that at least "ratio" of frames are neutral and subtract that value of prediction, only perform the correction after min_frames
-	void UpdatePredictionTrack(cv::Mat_<unsigned int>& prediction_corr_histogram, int& prediction_correction_count, vector<double>& correction, const vector<pair<string, double>>& predictions, double ratio=0.25, int num_bins = 200, double min_val = -3, double max_val = 5, int min_frames = 10);
-	void GetSampleHist(cv::Mat_<unsigned int>& prediction_corr_histogram, int prediction_correction_count, vector<double>& sample, double ratio, int num_bins = 200, double min_val = 0, double max_val = 5);
+	void UpdatePredictionTrack(cv::Mat_<float>& prediction_corr_histogram, int& prediction_correction_count, vector<double>& correction, const vector<pair<string, double>>& predictions, double ratio=0.25, int num_bins = 200, double min_val = -3, double max_val = 5, int min_frames = 10);
+	void GetSampleHist(cv::Mat_<float>& prediction_corr_histogram, int prediction_correction_count, vector<double>& sample, double ratio, int num_bins = 200, double min_val = 0, double max_val = 5);
 
 	void PostprocessPredictions();
 
-	vector<cv::Mat_<unsigned int>> au_prediction_correction_histogram;
+	vector<cv::Mat_<float>> au_prediction_correction_histogram;
 	vector<int> au_prediction_correction_count;
 
 	// Some dynamic scaling (the logic is that before the extreme versions of expression or emotion are shown,

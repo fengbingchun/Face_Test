@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup Label="ProjectConfigurations">
     <ProjectConfiguration Include="Debug|Win32">
       <Configuration>Debug</Configuration>
@@ -22,31 +22,32 @@
     <ProjectGuid>{FEC26178-EDFC-4BE0-B0E8-DCB72DD32109}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
     <RootNamespace>Tadas_OpenFace_FaceAnalyser</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0.17763.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
-    <PlatformToolset>v120</PlatformToolset>
+    <PlatformToolset>v141</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
     <ConfigurationType>StaticLibrary</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
-    <PlatformToolset>v120</PlatformToolset>
+    <PlatformToolset>v141</PlatformToolset>
     <CharacterSet>MultiByte</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
-    <PlatformToolset>v120</PlatformToolset>
+    <PlatformToolset>v141</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
     <ConfigurationType>StaticLibrary</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
-    <PlatformToolset>v120</PlatformToolset>
+    <PlatformToolset>v141</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
     <CharacterSet>MultiByte</CharacterSet>
   </PropertyGroup>
@@ -107,7 +108,7 @@
       <AssemblerListingLocation>.\../../../obj/dbg/x64_vc12/Tadas_OpenFace_FaceAnalyser\</AssemblerListingLocation>
       <ObjectFileName>.\../../../obj/dbg/x64_vc12/Tadas_OpenFace_FaceAnalyser\</ObjectFileName>
       <ProgramDataBaseFileName>.\../../../obj/dbg/x64_vc12/Tadas_OpenFace_FaceAnalyser\</ProgramDataBaseFileName>
-      <AdditionalIncludeDirectories>E:\GitCode\Face_Test\src\TadasBaltrusaitis_OpenFace\lib\local\FaceAnalyser\include;D:\soft\OpenCV2.4.13\opencv\build\include;E:\GitCode\Face_Test\src\TadasBaltrusaitis_OpenFace\lib\local\LandmarkDetector\include;E:\GitCode\Face_Test\src\dlib;D:\ProgramFiles\local\boost_1_58_0;D:\ProgramFiles\local\boost_1_58_0\boost;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>E:\GitCode\Face_Test\src\TadasBaltrusaitis_OpenFace\lib\local\FaceAnalyser\include;D:\soft\OpenCV3.4.2\vs2017\install\include;E:\GitCode\Face_Test\src\TadasBaltrusaitis_OpenFace\lib\local\LandmarkDetector\include;E:\GitCode\Face_Test\src\dlib;D:\ProgramFiles\local\boost_1_75_0;D:\ProgramFiles\local\boost_1_75_0\boost;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -151,7 +152,7 @@
       <AssemblerListingLocation>.\../../../obj/rel/x64_vc12/Tadas_OpenFace_FaceAnalyser\</AssemblerListingLocation>
       <ObjectFileName>.\../../../obj/rel/x64_vc12/Tadas_OpenFace_FaceAnalyser\</ObjectFileName>
       <ProgramDataBaseFileName>.\../../../obj/rel/x64_vc12/Tadas_OpenFace_FaceAnalyser\</ProgramDataBaseFileName>
-      <AdditionalIncludeDirectories>E:\GitCode\Face_Test\src\TadasBaltrusaitis_OpenFace\lib\local\FaceAnalyser\include;D:\soft\OpenCV2.4.13\opencv\build\include;E:\GitCode\Face_Test\src\TadasBaltrusaitis_OpenFace\lib\local\LandmarkDetector\include;E:\GitCode\Face_Test\src\dlib;D:\ProgramFiles\local\boost_1_58_0;D:\ProgramFiles\local\boost_1_58_0\boost;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>E:\GitCode\Face_Test\src\TadasBaltrusaitis_OpenFace\lib\local\FaceAnalyser\include;D:\soft\OpenCV3.4.2\vs2017\install\include;E:\GitCode\Face_Test\src\TadasBaltrusaitis_OpenFace\lib\local\LandmarkDetector\include;E:\GitCode\Face_Test\src\dlib;D:\ProgramFiles\local\boost_1_75_0;D:\ProgramFiles\local\boost_1_75_0\boost;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
